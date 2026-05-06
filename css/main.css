@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Young+Serif&display=swap");
+
+*:not(dialog),
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0px;
+	font-family: "Rubik";
+}
+body {
+	position: relative;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 16px 24px;
+	align-items: center;
+	background-color: black;
+}
+nav {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	display: none;
+}
+.header-links-container {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+.header-links-a {
+	font-weight: 600;
+	font-size: 16px;
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+	text-decoration: none;
+}
+.header-links-a:hover {
+	border-bottom: 3px white solid;
+}
+#header-Seaarch-Input-Container {
+	display: flex;
+	align-items: center;
+	background-color: white;
+	border-radius: 999px;
+	padding: 11px;
+	gap: 12px;
+	max-width: 159px;
+}
+#headerSearchInput {
+	border: none;
+	max-width: 80%;
+}
+#headerSearchInput::placeholder {
+	font-family: Rubik;
+	font-weight: 700;
+	font-style: Bold;
+	font-size: 16px;
+	vertical-align: middle;
+	text-align: start;
+	color: #dbdbdb;
+}
+#darkmode {
+	background-color: transparent;
+	border: none;
+	display: none;
+}
+#menuBurgerButton {
+	background-color: transparent;
+	border: none;
+	padding: none;
+}
+#menuBurgerButtonSvg {
+	padding: 0px;
+}
+dialog {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0px;
+	left: 0px;
+	background: rgba(54, 54, 54, 0.9);
+	border: rgba(54, 54, 54, 0.9) solid;
+}
+.dialog-div {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 44%;
+	left: 28%;
+	gap: 24px;
+}
+.big-a {
+	font-size: 38px;
+}
+.big-gap {
+	gap: 24px;
+}
+#closesvg {
+	position: absolute;
+	top: 18px;
+	right: 24px;
+}
+@media screen and (min-width: 850px) and (max-width: 1439px) {
+	nav {
+		display: flex;
+	}
+    #menuBurgerButton {
+        display: none;
+    }
+    #darkmode {
+        display: block;
+    }
+}
+@media screen and (min-width: 1440px) {
+	nav {
+		display: flex;
+	}
+    #menuBurgerButton {
+        display: none;
+    }
+    #darkmode {
+        display: block;
+    }
+    #header-Seaarch-Input-Container {
+        min-width: 310px;
+        max-width: none;
+    }
+}
