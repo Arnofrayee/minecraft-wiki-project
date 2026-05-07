@@ -16,6 +16,7 @@ main {
 	margin: 40px;
 	padding: 26px 30px;
 	gap: 30px;
+	border-radius: 4px;
 }
 h1 {
 	font-weight: 300;
@@ -52,6 +53,13 @@ p {
 	display: flex;
 	flex-direction: column;
 }
+.pLeft {
+	display: flex;
+	flex-direction: column;
+}
+.pRight {
+	display: flex;
+}
 .paragraph1 {
 	width: 95%;
 }
@@ -66,6 +74,7 @@ h2 {
 }
 .botText {
 	width: 95%;
+	color: black;
 }
 .searchDiv {
 	display: flex;
@@ -179,7 +188,11 @@ h3 {
 	color: #8c8c8c;
 	margin-top: -10;
 }
-@media screen and (min-width: 850px) and (max-width: 1440px) {
+@media screen and (min-width: 850px) and (max-width: 1439px) {
+	.imgNav {
+		display: flex;
+		gap: 30px;
+	}
 	nav {
 		display: flex;
 	}
@@ -199,6 +212,62 @@ h3 {
 		display: block;
 	}
 	.pReadThrough {
-		width: 85%;
+		width: 90%;
+	}
+	.paragraphes {
+		flex-direction: row;
+	}
+	.pLeft {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+	.paragraph1 {
+		width: 100%;
+	}
+	.pRight {
+		display: flex;
+	}
+	.mobsImg {
+		width: 313px;
+		height: 266px;
+		object-fit: contain;
+	}
+	.botText {
+		width: 97%;
+	}
+	.chose {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-rows: 77px;
+	}
+	.chose-div {
+		width: 114px;
+	}
+	.chose-div-select {
+		min-width: 92px;
+		padding-left: 15px;
+	}
+	.chose-div-input {
+		width: 93px;
+	}
+}
+@media screen and (min-width: 1440px) {
+	nav {
+		display: flex;
+	}
+	#menuBurgerButton {
+		display: none;
+	}
+	#darkmode {
+		display: block;
+	}
+	#header-Seaarch-Input-Container {
+		min-width: 310px;
+		max-width: none;
+	}
+	.imgNav {
+		display: flex;
+		gap: 20px;
+		gap: 50px;
 	}
 }
