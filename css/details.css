@@ -1,0 +1,23 @@
+#botPage {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 317px;
+}
+.mobContainer {
+	gap: 10px;
+	padding: 12px;
+	display: flex;
+	flex-direction: column;
+	border: 2px solid #4f8c69;
+}
+.mobContainerBtn {
+	box-shadow: -4px -4px 2px 0px #00000040 inset;
+	background: #4f8c69;
+	width: 100%;
+	padding: 12px;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 16px;
+	text-align: center;
+    border: 0;
+}
