@@ -108,25 +108,30 @@ dialog {
 	nav {
 		display: flex;
 	}
-    #menuBurgerButton {
-        display: none;
-    }
-    #darkmode {
-        display: block;
-    }
+	#menuBurgerButton {
+		display: none;
+	}
+	#darkmode {
+		display: block;
+	}
 }
 @media screen and (min-width: 1440px) {
 	nav {
 		display: flex;
 	}
-    #menuBurgerButton {
-        display: none;
-    }
-    #darkmode {
-        display: block;
-    }
-    #header-Seaarch-Input-Container {
-        min-width: 310px;
-        max-width: none;
-    }
+	#menuBurgerButton {
+		display: none;
+	}
+	#darkmode {
+		display: block;
+	}
+	#header-Seaarch-Input-Container {
+		min-width: 310px;
+		max-width: none;
+	}
+	.imgNav {
+		display: flex;
+		gap: 20px;
+		gap: 50px;
+	}
 }
