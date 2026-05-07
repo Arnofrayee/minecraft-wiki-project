@@ -61,11 +61,31 @@ $form.addEventListener("submit", async (e) => {
 	const request = await fetch(url);
 	const requestInJson = await request.json();
 		for (let i = 0; i < requestInJson.length; i++) {
-		getFormdatas(requestInJson[i].name, requestInJson[i].image, requestInJson[i].isClassification, requestInJson[i].type)
-	}
+		    createMobContainer(requestInJson[i].name, requestInJson[i].image, requestInJson[i].isClassification, requestInJson[i].type)
+	    }
 });
 
-function getFormdatas(name, image, classi, type) {
-    $botPage.innerHTML = ""
+function createMobContainer(name, image, classi, type) {
+    `<div class="mobContainer">
+					<button class="mobContainerBtn">${name}</button>
+					<img
+						src=${image}
+						alt="mobimage"
+					/>
+					<div class="mobContainerDivP">
+						<p class="mobContainerClassification">${classi}</p>
+						<p class="mobContainerType">${type}</p>
+					</div>
+                    <hr class="mobContainerHr">
+					<button class="mobContainerBtn"><a class="mobContainerBtnA" href="../html/details.html">SEE MORE</a></button>
+				</div>`
+    const $divContainer = document.createElement("div");
+    $divContainer.classList.add("mobContainer");
+
+    const $mobContainerBtn = document.createElement("button");
+    $mobContainerBtn.classList.add("mobContainerBtn");
+    $mobContainerBtn.textContent = name;
+    $divContainer.appendChild($mobContainerBtn);
+
     
 }

@@ -4,11 +4,11 @@
 	grid-template-rows: 317px;
 }
 .mobContainer {
-	gap: 10px;
 	padding: 12px;
 	display: flex;
 	flex-direction: column;
 	border: 2px solid #4f8c69;
+	max-width: 259px;
 }
 .mobContainerBtn {
 	box-shadow: -4px -4px 2px 0px #00000040 inset;
@@ -19,5 +19,43 @@
 	font-weight: 700;
 	font-size: 16px;
 	text-align: center;
+	border: 0;
+}
+.mobContainerDivP {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.mobContainerClassification {
+	font-weight: 300;
+	font-style: Light;
+	font-size: 12px;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: underline;
+	text-decoration-style: solid;
+	color: #0246f1;
+}
+.mobContainerType {
+	font-weight: 500;
+	font-style: Medium;
+	font-size: 12px;
+	text-align: center;
+	vertical-align: middle;
+	color: #3a3a3a;
+}
+.mobContainerBtnA {
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 16px;
+	text-align: center;
+	border: 0;
+    text-decoration: none;
+}
+.mobContainerHr {
+    background-color: #4F8C69;
     border: 0;
+    height: 2px;
+    width: 100%;
+    margin: 10px 0px;
 }
