@@ -21,6 +21,7 @@ h1 {
 	font-weight: 300;
 	font-size: 48px;
 	width: 50%;
+	color: #3a3a3a;
 }
 .readThrough {
 	display: flex;
@@ -36,6 +37,9 @@ h1 {
 .pReadThrough {
 	width: 85%;
 }
+.br1 {
+	display: none;
+}
 p {
 	font-weight: 400;
 	font-size: 16px;
@@ -43,6 +47,10 @@ p {
 }
 .bold {
 	font-weight: 600;
+}
+.paragraphes {
+	display: flex;
+	flex-direction: column;
 }
 .paragraph1 {
 	width: 95%;
@@ -157,4 +165,40 @@ form {
 	color: white;
 	border: 0px;
 	align-self: center;
+}
+#botPage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+h3 {
+	font-weight: 700;
+	font-size: 22px;
+	color: #8c8c8c;
+	margin-top: -10;
+}
+@media screen and (min-width: 850px) and (max-width: 1440px) {
+	nav {
+		display: flex;
+	}
+	#menuBurgerButton {
+		display: none;
+	}
+	#darkmode {
+		display: block;
+	}
+	main {
+		margin: 80px;
+	}
+	h1 {
+		width: 100%;
+	}
+	.br1 {
+		display: block;
+	}
+	.pReadThrough {
+		width: 85%;
+	}
 }
