@@ -43,7 +43,7 @@ hr {
     width: 100%;
 }
 
-@media screen (min-width: 850px) and (max-width: 1439px){
+@media screen and (min-width: 850px) and (max-width: 1439px){
     main {
         width: 25%;
     }
