@@ -19,13 +19,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 	$h1.textContent = requestjson[0].name;
 	$description.textContent = requestjson[0].description;
 	$mobContainerBtn1.innerHTML = `<img src="${requestjson[0].icon}" alt="mob-icon" class="iconImage"> ${name}`;
-    $image.setAttribute("src", requestjson[0].image);
-    $health.textContent = requestjson[0].health;
-    $armor.textContent = requestjson[0].armor;
-    $classi.textContent = requestjson[0].classification;
-    $behavior.textContent = requestjson[0].type;
-    $height.textContent ="Height: " + requestjson[0].height + " blocks";
-    $width.textContent = "Width: " + requestjson[0].width + " blocks";
+	$image.setAttribute("src", requestjson[0].image);
+	$health.textContent = requestjson[0].health;
+	$armor.textContent = requestjson[0].armor;
+	$classi.textContent = requestjson[0].classification;
+	$behavior.textContent = requestjson[0].type;
+	$height.textContent = "Height: " + requestjson[0].height + " blocks";
+	$width.textContent = "Width: " + requestjson[0].width + " blocks";
 });
 
 //Start of dialog section
@@ -33,11 +33,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 const $menuBurgerButton = document.querySelector("#menuBurgerButton");
 const $dialog = document.querySelector("dialog");
 const $closesvg = document.querySelector("#closesvg");
+const $body = document.querySelector("body");
 let isDialogOpened = false;
 $menuBurgerButton.addEventListener("click", () => {
 	if (!isDialogOpened) {
 		$dialog.showModal();
 		isDialogOpened = true;
+		$body.style.overflowY = "hidden";
 	} else {
 		$dialog.close();
 		isDialogOpened = false;
@@ -45,6 +47,7 @@ $menuBurgerButton.addEventListener("click", () => {
 });
 $closesvg.addEventListener("click", () => {
 	$dialog.close();
+	$body.style.overflowY = "visible";
 });
 
 //End of dialog section
