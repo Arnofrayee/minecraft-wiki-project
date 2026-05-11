@@ -11,6 +11,15 @@
 }
 body {
 	position: relative;
+	background:
+		url(../assets/body-grass-background.png), url(../assets/body-stone.png);
+	background-position:
+		0px 200px,
+		0px 0px;
+	background-repeat: repeat-x, repeat;
+
+	display: flex;
+	flex-direction: column;
 }
 header {
 	display: flex;
@@ -121,7 +130,135 @@ dialog {
 	height: 130px;
 	position: absolute;
 }
+
+main {
+	display: flex;
+	flex-direction: column;
+	background-color: #e6eff4;
+	margin: 40px;
+	padding: 26px 30px;
+	gap: 30px;
+}
+h1 {
+	font-weight: 300;
+	font-size: 48px;
+	width: 50%;
+	color: #3a3a3a;
+}
+.readThrough {
+	display: flex;
+	background-color: #f5c2cd;
+	border-left: solid #bc5c70 5px;
+	padding: 10px;
+	gap: 10px;
+}
+.painting {
+	width: 59px;
+	height: 60px;
+}
+.pReadThrough {
+	width: 85%;
+}
+.br1 {
+	display: none;
+}
+p {
+	font-weight: 400;
+	font-size: 16px;
+	color: #3a3a3a;
+}
+.bold {
+	font-weight: 600;
+}
+.paragraphes {
+	display: flex;
+	flex-direction: column;
+}
+.paragraph1 {
+	width: 95%;
+}
+.bottom {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+h2 {
+	font-weight: 500;
+	font-size: 22px;
+}
+.botText {
+	width: 95%;
+}
+
+.mobContainer {
+	padding: 12px;
+	display: flex;
+	flex-direction: column;
+	border: 2px solid #4f8c69;
+	width: 259px;
+	height: 317px;
+	justify-content: space-between;
+}
+.mobContainerBtn {
+	box-shadow: -4px -4px 2px 0px #00000040 inset;
+	background: #4f8c69;
+	width: 100%;
+	padding: 12px;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 16px;
+	text-align: center;
+	border: 0;
+}
+.mobContainerDivP {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.mobContainerClassification {
+	font-weight: 300;
+	font-style: Light;
+	font-size: 12px;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: underline;
+	text-decoration-style: solid;
+	color: #0246f1;
+}
+.mobContainerType {
+	font-weight: 500;
+	font-style: Medium;
+	font-size: 12px;
+	text-align: center;
+	vertical-align: middle;
+	color: #3a3a3a;
+}
+.mobimage {
+	max-height: 151px;
+	max-width: 234px;
+	object-fit: contain;
+}
+.mobContainerBtnA {
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 16px;
+	text-align: center;
+	border: 0;
+	text-decoration: none;
+}
+.mobContainerHr {
+	background-color: #4f8c69;
+	border: 0;
+	height: 2px;
+	width: 100%;
+	margin: 10px 0px;
+}
+
 @media screen and (min-width: 850px) and (max-width: 1439px) {
+	.imgNav {
+		display: flex;
+		gap: 30px;
+	}
 	nav {
 		display: flex;
 	}
@@ -131,6 +268,33 @@ dialog {
 	#darkmode {
 		display: block;
 	}
+	main {
+		margin: 80px;
+	}
+	h1 {
+		width: 100%;
+	}
+	.br1 {
+		display: block;
+	}
+	.pReadThrough {
+		width: 90%;
+	}
+	.paragraphes {
+		flex-direction: row;
+	}
+	.pLeft {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		width: 55%;
+	}
+	.paragraph1 {
+		width: 100%;
+	}
+	.pRight {
+		display: flex;
+	}   
 }
 @media screen and (min-width: 1440px) {
 	nav {
@@ -145,5 +309,36 @@ dialog {
 	#header-Seaarch-Input-Container {
 		min-width: 310px;
 		max-width: none;
+	}
+	.br1 {
+		display: block;
+	}
+	.pReadThrough {
+		width: 100%;
+	}
+	.imgNav {
+		display: flex;
+		gap: 20px;
+		gap: 50px;
+	}
+	.paragraphes {
+		flex-direction: row;
+		gap: 40px;
+	}
+	.paragraphes .pLeft:nth-child(1) {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+	.paragraphes .pLeft:nth-child(2),
+	.paragraphes .pLeft:nth-child(2) img {
+		max-width: 313px;
+	}
+	.paragraph1 {
+		width: 100%;
+	}
+	.pRight {
+		display: flex;
+		width: 313px;
 	}
 }
