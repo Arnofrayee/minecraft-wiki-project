@@ -60,32 +60,67 @@ $form.addEventListener("submit", async (e) => {
 	}
 	const request = await fetch(url);
 	const requestInJson = await request.json();
-		for (let i = 0; i < requestInJson.length; i++) {
-		    createMobContainer(requestInJson[i].name, requestInJson[i].image, requestInJson[i].isClassification, requestInJson[i].type)
-	    }
+	for (let i = 0; i < requestInJson.length; i++) {
+		createMobContainer(
+			requestInJson[i].name,
+			requestInJson[i].image,
+			requestInJson[i].isClassification,
+			requestInJson[i].type,
+		);
+	}
 });
 
 function createMobContainer(name, image, classi, type) {
-    `<div class="mobContainer">
-					<button class="mobContainerBtn">${name}</button>
-					<img
-						src=${image}
-						alt="mobimage"
-					/>
-					<div class="mobContainerDivP">
-						<p class="mobContainerClassification">${classi}</p>
-						<p class="mobContainerType">${type}</p>
-					</div>
-                    <hr class="mobContainerHr">
-					<button class="mobContainerBtn"><a class="mobContainerBtnA" href="../html/details.html">SEE MORE</a></button>
-				</div>`
-    const $divContainer = document.createElement("div");
-    $divContainer.classList.add("mobContainer");
-
-    const $mobContainerBtn = document.createElement("button");
-    $mobContainerBtn.classList.add("mobContainerBtn");
-    $mobContainerBtn.textContent = name;
-    $divContainer.appendChild($mobContainerBtn);
-
+	// `<div class="mobContainer">
+	// 		<button class="mobContainerBtn">${name}</button>
+	// 		<img
+	// 		    src=${image}
+	// 			alt="mobimage"
+	// 		/>
+	// 		<div class="mobContainerDivP">
+	// 			<p class="mobContainerClassification">${classi}</p>
+	// 			<p class="mobContainerType">${type}</p>
+	// 		</div>
+	//          <hr class="mobContainerHr">
+	// 		<button class="mobContainerBtn"><a class="mobContainerBtnA" href="../html/details.html">SEE MORE</a></button>
+	// </div>`;
     
+	const $divContainer = document.createElement("div");
+	$divContainer.classList.add("mobContainer");
+
+	const $mobContainerBtn = document.createElement("button");
+	$mobContainerBtn.classList.add("mobContainerBtn");
+	$mobContainerBtn.textContent = name;
+	$divContainer.appendChild($mobContainerBtn);
+
+	const $mobimage = document.createElement("img");
+	$mobimage.setAttribute("src", `${image}`);
+	$divContainer.appendChild($mobimage);
+
+	const $mobContainerDivP = document.createElement("div");
+	$mobContainerDivP.classList.add("mobContainerDivP");
+	$divContainer.appendChild($mobContainerDivP);
+
+	const $mobContainerClassification = document.createElement("p");
+	$mobContainerClassification.textContent = classi;
+	$mobContainerDivP.appendChild($mobContainerClassification);
+
+	const $mobContainerType = document.createElement("p");
+	$mobContainerType.classList.add("mobContainerType");
+	$mobContainerDivP.appendChild($mobContainerType);
+
+	const $hr = document.createElement("hr");
+	$hr.classList.add("mobContainerHr");
+	$divContainer.appendChild($hr);
+
+	const $mobContainerBtn2 = document.createElement("button");
+	$mobContainerBtn2.classList.add("mobContainerBtn");
+	$divContainer.appendChild($mobContainerBtn2);
+
+	const $mobContainerBtnA = document.createElement("a");
+	$mobContainerBtnA.classList.add("mobContainerBtnA");
+	$mobContainerBtnA.setAttribute("href", "../html/details.html");
+	$mobContainerBtn2.appendChild($mobContainerBtnA);
+
+	$botPage.appendChild($divContainer);
 }

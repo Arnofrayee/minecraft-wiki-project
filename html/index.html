@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="../css/reset.css" />
 		<link rel="stylesheet" href="../css/normalize.css" />
 		<link rel="stylesheet" href="../css/main.css" />
-		<link rel="stylesheet" href="/css/styles.css" />
+		<link rel="stylesheet" href="../css/styles.css" />
 		<title>Document</title>
 	</head>
 	<body>
@@ -73,7 +73,11 @@
 					/>
 				</svg>
 
-				<input type="text" id="headerSearchInput" placeholder="Search..." />
+				<input
+					type="text"
+					id="headerSearchInput"
+					placeholder="Search..."
+				/>
 			</div>
 
 			<button id="darkmode">
@@ -120,7 +124,9 @@
 								fill="white"
 							/>
 						</svg>
-						<a href="index.html" class="header-links-a big-a">EXPLORE</a>
+						<a href="index.html" class="header-links-a big-a"
+							>EXPLORE</a
+						>
 					</div>
 					<div class="header-links-container big-gap">
 						<svg
@@ -135,7 +141,9 @@
 								fill="white"
 							/>
 						</svg>
-						<a href="arena.html" class="header-links-a big-a">ARENA</a>
+						<a href="arena.html" class="header-links-a big-a"
+							>ARENA</a
+						>
 					</div>
 					<div class="header-links-container big-gap">
 						<svg
@@ -150,7 +158,9 @@
 								fill="white"
 							/>
 						</svg>
-						<a href="rules.html" class="header-links-a big-a">RULES</a>
+						<a href="rules.html" class="header-links-a big-a"
+							>RULES</a
+						>
 					</div>
 				</div>
 				<svg
@@ -168,6 +178,8 @@
 				</svg>
 			</dialog>
 		</header>
+		<div class="cloud-background"><div class="cloud-background-absolute"></div></div>
+
 		<main>
 			<h1>Explore Minecraft entities</h1>
 			<article class="readThrough">
@@ -182,8 +194,8 @@
 					<p class="pReadThrough">
 						<span class="bold">This page use many images.</span
 						><br class="br1" />
-						It is not recommended for people with limited or slow internet
-						connections to read through this page.
+						It is not recommended for people with limited or slow
+						internet connections to read through this page.
 					</p>
 				</div>
 			</article>
@@ -191,15 +203,17 @@
 				<article class="pLeft">
 					<p class="paragraph1">
 						An <span class="bold">Entity</span> is an AI-driven
-						game entity resembling a living creature. Besides its common
-						meaning, the term "mob" is short for "mobile entity".[1] All
-						entities can be attacked and hurt (from falling, attacked by
-						a player or another entity, falling into the void, hit by an arrow,
-						etc), and have some form of voluntary movement.
+						game entity resembling a living creature. Besides its
+						common meaning, the term "mob" is short for "mobile
+						entity".[1] All entities can be attacked and hurt
+						(from falling, attacked by a player or another entity,
+						falling into the void, hit by an arrow, etc), and have
+						some form of voluntary movement.
 					</p>
 					<p class="paragraph1">
-						Different types of entities often have unique AI and drop good or
-						bad loot depending on the entity that was killed.
+						Different types of entities often have unique AI and
+						drop good or bad loot depending on the entity that was
+						killed.
 					</p>
 				</article>
 				<article class="pLeft">
@@ -210,10 +224,10 @@
 				<h2>List of entities</h2>
 				<hr />
 				<p class="botText">
-					Entities are classifie by their nature from the player's perspective.
-					You can search for one or multiples entities by their name using the
-					search bar or simply by filling appropriate filters (type, health,
-					armor, damage, etc..)
+					Entities are classifie by their nature from the player's
+					perspective. You can search for one or multiples entities by
+					their name using the search bar or simply by filling
+					appropriate filters (type, health, armor, damage, etc..)
 				</p>
 			</div>
 			<form>
@@ -249,20 +263,16 @@
 								</svg>
 								<p class="chose-div-option-p">Chose</p>
 							</option>
-							<option value="Arthropod">Arthropod</option>
-							<option value="Undead">Undead</option>
-							<option value="Animal">Animal</option>
-							<option value="Aquatic">Aquatic</option>
-							<option value="Monster">Monster</option>
+							<option value="arthropod">Arthropod</option>
+							<option value="undead">Undead</option>
+							<option value="animal">Animal</option>
+							<option value="aquatic">Aquatic</option>
+							<option value="monster">Monster</option>
 						</select>
 					</div>
 					<div class="chose-div">
 						<p class="chose-div-p">Type</p>
-						<select
-							name="ClassificationSelect"
-							id="ClassificationSelect"
-							class="chose-div-select"
-						>
+						<select name="type" id="type" class="chose-div-select">
 							<option value="">
 								<svg
 									width="14"
@@ -285,15 +295,31 @@
 					</div>
 					<div class="chose-div">
 						<p class="chose-div-p">Health</p>
-						<input type="number" class="chose-div-input" placeholder="18" />
+						<input
+							type="number"
+							class="chose-div-input"
+							placeholder="18"
+							name="health"
+						/>
 					</div>
 					<div class="chose-div">
 						<p class="chose-div-p">Armor</p>
-						<input type="number" class="chose-div-input" placeholder="12" />
+						<input
+							type="number"
+							class="chose-div-input"
+							placeholder="12"
+							name="armor"
+						/>
 					</div>
 					<div class="chose-div">
 						<p class="chose-div-p">Damage</p>
-						<input type="number" class="chose-div-input" placeholder="2" />
+						<input
+							type="number"
+							class="chose-div-input"
+							placeholder="2"
+							name="damage"
+							disabled
+						/>
 					</div>
 				</div>
 				<button type="submit" id="searchbtn">SEARCH</button>
@@ -315,5 +341,6 @@
 				</svg>
 			</section>
 		</main>
+		<script src="../js/app.js"></script>
 	</body>
 </html>
