@@ -10,19 +10,22 @@ body {
     font-family: "Rubik", sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
     overflow-y: hidden;
+    background: url(../assets/body-grass-background.png), url(../assets/body-stone.png);
+    background-position: 0px 200px, 0px 0px;
+    background-repeat: repeat-x, repeat;
 }
 
 h1 {
     font-size: 48px;
     font-weight: 100;
+    padding-bottom: 20px;
 }
 
 p {
     font-size: 16px;
+    padding-bottom: 25px;
 }
 
 main {
@@ -41,10 +44,33 @@ span {
 
 hr {
     width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
-@media screen and (min-width: 850px) and (max-width: 1439px){
-    main {
-        width: 25%;
-    }
+@media screen and (min-width: 850px) and (max-width: 1439px) {
+	nav {
+		display: flex;
+	}
+	#menuBurgerButton {
+		display: none;
+	}
+	#darkmode {
+		display: block;
+	}
+}
+@media screen and (min-width: 1440px) {
+	nav {
+		display: flex;
+	}
+	#menuBurgerButton {
+		display: none;
+	}
+	#darkmode {
+		display: block;
+	}
+	#header-Seaarch-Input-Container {
+		min-width: 310px;
+		max-width: none;
+	}
 }
