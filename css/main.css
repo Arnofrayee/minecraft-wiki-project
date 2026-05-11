@@ -138,6 +138,7 @@ main {
 	margin: 40px;
 	padding: 26px 30px;
 	gap: 30px;
+    border-radius: 4px;
 }
 h1 {
 	font-weight: 300;
