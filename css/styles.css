@@ -294,9 +294,12 @@ h3 {
 		grid-template-columns: 260px 260px;
 		gap: 20px;
 	}
+	.notfounddiv {
+		position: absolute;
+		left: 40%;
+	}
 }
 @media screen and (min-width: 1440px) {
-	
 	.mobsImg {
 		width: 313px;
 		height: 133px;
@@ -329,5 +332,9 @@ h3 {
 		display: grid;
 		grid-template-columns: 260px 260px 260px 260px;
 		gap: 20px;
+	}
+	.notfounddiv {
+		position: absolute;
+		left: 45%;
 	}
 }
