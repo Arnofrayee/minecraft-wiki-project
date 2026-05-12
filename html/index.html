@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="../css/reset.css" />
 		<link rel="stylesheet" href="../css/normalize.css" />
 		<link rel="stylesheet" href="../css/main.css" />
-		<link rel="stylesheet" href="/css/styles.css" />
+		<link rel="stylesheet" href="../css/styles.css" />
 		<title>Document</title>
 	</head>
 	<body>
@@ -75,7 +75,11 @@
 					/>
 				</svg>
 
-				<input type="text" id="headerSearchInput" placeholder="Search..." />
+				<input
+					type="text"
+					id="headerSearchInput"
+					placeholder="Search..."
+				/>
 			</div>
 
 			<button id="darkmode">
@@ -122,7 +126,9 @@
 								fill="white"
 							/>
 						</svg>
-						<a href="index.html" class="header-links-a big-a">EXPLORE</a>
+						<a href="index.html" class="header-links-a big-a"
+							>EXPLORE</a
+						>
 					</div>
 					<div class="header-links-container big-gap">
 						<svg
@@ -137,7 +143,9 @@
 								fill="white"
 							/>
 						</svg>
-						<a href="arena.html" class="header-links-a big-a">ARENA</a>
+						<a href="arena.html" class="header-links-a big-a"
+							>ARENA</a
+						>
 					</div>
 					<div class="header-links-container big-gap">
 						<svg
@@ -152,7 +160,9 @@
 								fill="white"
 							/>
 						</svg>
-						<a href="rules.html" class="header-links-a big-a">RULES</a>
+						<a href="rules.html" class="header-links-a big-a"
+							>RULES</a
+						>
 					</div>
 				</div>
 				<svg
@@ -170,6 +180,10 @@
 				</svg>
 			</dialog>
 		</header>
+		<div class="cloud-background">
+			<div class="cloud-background-absolute"></div>
+		</div>
+
 		<main>
 			<h1>Explore Minecraft entities</h1>
 			<article class="readThrough">
@@ -184,8 +198,8 @@
 					<p class="pReadThrough">
 						<span class="bold">This page use many images.</span
 						><br class="br1" />
-						It is not recommended for people with limited or slow internet
-						connections to read through this page.
+						It is not recommended for people with limited or slow
+						internet connections to read through this page.
 					</p>
 				</div>
 			</article>
@@ -193,29 +207,31 @@
 				<article class="pLeft">
 					<p class="paragraph1">
 						An <span class="bold">Entity</span> is an AI-driven
-						game entity resembling a living creature. Besides its common
-						meaning, the term "mob" is short for "mobile entity".[1] All
-						entities can be attacked and hurt (from falling, attacked by
-						a player or another entity, falling into the void, hit by an arrow,
-						etc), and have some form of voluntary movement.
+						game entity resembling a living creature. Besides its
+						common meaning, the term "mob" is short for "mobile
+						entity".[1] All entities can be attacked and hurt
+						(from falling, attacked by a player or another entity,
+						falling into the void, hit by an arrow, etc), and have
+						some form of voluntary movement.
 					</p>
 					<p class="paragraph1">
-						Different types of entities often have unique AI and drop good or
-						bad loot depending on the entity that was killed.
+						Different types of entities often have unique AI and
+						drop good or bad loot depending on the entity that was
+						killed.
 					</p>
 				</article>
-				<article class="pRight">
-					<img src="/assets/body-mobs.png" alt="mobs" class="mobsImg" />
+				<article class="pLeft">
+					<img src="/assets/body-mobs.png" alt="" id="mobsimg" />
 				</article>
 			</section>
 			<div class="bottom">
 				<h2>List of entities</h2>
 				<hr />
 				<p class="botText">
-					Entities are classifie by their nature from the player's perspective.
-					You can search for one or multiples entities by their name using the
-					search bar or simply by filling appropriate filters (type, health,
-					armor, damage, etc..)
+					Entities are classifie by their nature from the player's
+					perspective. You can search for one or multiples entities by
+					their name using the search bar or simply by filling
+					appropriate filters (type, health, armor, damage, etc..)
 				</p>
 			</div>
 			<form>
@@ -314,21 +330,23 @@
 			</form>
 			<hr />
 			<section id="botPage">
-				<h3>No entity found</h3>
-				<svg
-					width="54"
-					height="54"
-					viewBox="0 0 54 54"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<path
-						d="M26.6667 0C11.92 0 0 11.92 0 26.6667C0 41.4133 11.92 53.3333 26.6667 53.3333C33.7391 53.3333 40.5219 50.5238 45.5228 45.5228C50.5238 40.5219 53.3333 33.7391 53.3333 26.6667C53.3333 11.92 41.3333 0 26.6667 0ZM12.6933 18.1867L15.52 15.36L18.3467 18.1867L21.1733 15.36L24 18.1867L21.1733 21.0133L24 23.84L21.1733 26.6667L18.3467 23.84L15.52 26.6667L12.6933 23.84L15.52 21.0133L12.6933 18.1867ZM13.04 41.3333C15.1733 35.8933 20.4533 32 26.6667 32C32.88 32 38.16 35.8933 40.2933 41.3333H13.04ZM40.64 23.84L37.8133 26.6667L34.9867 23.84L32.16 26.6667L29.3333 23.84L32.16 21.0133L29.3333 18.1867L32.16 15.36L34.9867 18.1867L37.8133 15.36L40.64 18.1867L37.8133 21.0133L40.64 23.84Z"
-						fill="#8C8C8C"
-					/>
-				</svg>
+				<div class="notfounddiv">
+					<h3>No entity found</h3>
+					<svg
+						width="54"
+						height="54"
+						viewBox="0 0 54 54"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M26.6667 0C11.92 0 0 11.92 0 26.6667C0 41.4133 11.92 53.3333 26.6667 53.3333C33.7391 53.3333 40.5219 50.5238 45.5228 45.5228C50.5238 40.5219 53.3333 33.7391 53.3333 26.6667C53.3333 11.92 41.3333 0 26.6667 0ZM12.6933 18.1867L15.52 15.36L18.3467 18.1867L21.1733 15.36L24 18.1867L21.1733 21.0133L24 23.84L21.1733 26.6667L18.3467 23.84L15.52 26.6667L12.6933 23.84L15.52 21.0133L12.6933 18.1867ZM13.04 41.3333C15.1733 35.8933 20.4533 32 26.6667 32C32.88 32 38.16 35.8933 40.2933 41.3333H13.04ZM40.64 23.84L37.8133 26.6667L34.9867 23.84L32.16 26.6667L29.3333 23.84L32.16 21.0133L29.3333 18.1867L32.16 15.36L34.9867 18.1867L37.8133 15.36L40.64 18.1867L37.8133 21.0133L40.64 23.84Z"
+							fill="#8C8C8C"
+						/>
+					</svg>
+				</div>
 			</section>
 		</main>
-		<script src="/js/app.js"></script>
+		<script src="../js/app.js"></script>
 	</body>
 </html>

@@ -5,24 +5,33 @@
     padding: 0;
 } */
 
+header {
+	width: 100%;
+}
+
 body {
 	background-color: black;
-    font-family: "Rubik", sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow-y: hidden;
+	font-family: "Rubik", sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background:
+		url(../assets/body-grass-background.png), url(../assets/body-stone.png);
+	background-position:
+		0px 200px,
+		0px 0px;
+	background-repeat: repeat-x, repeat;
 }
 
 h1 {
-    font-size: 48px;
-    font-weight: 100;
+	font-size: 48px;
+	font-weight: 100;
+	padding-bottom: 20px;
 }
 
 p {
-    font-size: 16px;
+	font-size: 16px;
+	padding-bottom: 25px;
 }
 
 main {
@@ -31,8 +40,8 @@ main {
 	display: flex;
 	flex-direction: column;
 	width: 75%;
-    text-align: start;
-    padding: 26px 30px;
+	text-align: start;
+	padding: 26px 30px;
 }
 
 span {
@@ -40,11 +49,21 @@ span {
 }
 
 hr {
-    width: 100%;
+	width: 100%;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
-@media screen and (min-width: 850px) and (max-width: 1439px){
-    main {
-        width: 25%;
-    }
+.arenatab {
+	color: #0246f1;
+	text-decoration: none;
+	border-bottom: #0246f1 solid 3px;
+	font-weight: 600;
+}
+
+.arenatab:hover {
+	color: #336dff;
+	text-decoration: none;
+	border-bottom: #336dff solid 3px;
+	font-weight: 600;
 }
