@@ -60,12 +60,16 @@ $form.addEventListener("submit", async (e) => {
 	}
 	const request = await fetch(url);
 	const requestInJson = await request.json();
-		for (let i = 0; i < requestInJson.length; i++) {
-		getFormdatas(requestInJson[i].name, requestInJson[i].image, requestInJson[i].isClassification, requestInJson[i].type)
+	for (let i = 0; i < requestInJson.length; i++) {
+		getFormdatas(
+			requestInJson[i].name,
+			requestInJson[i].image,
+			requestInJson[i].isClassification,
+			requestInJson[i].type,
+		);
 	}
 });
 
 function getFormdatas(name, image, classi, type) {
-    $botPage.innerHTML = ""
-    
+	$botPage.innerHTML = "";
 }
