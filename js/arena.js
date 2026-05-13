@@ -23,6 +23,7 @@ $closesvg.addEventListener("click", () => {
 //End of dialog section
 
 document.addEventListener("DOMContentLoaded", async () => {
+	console.log("loaded");
 	const requestselect = await fetch("http://10.69.4.208:3000/v1/entities");
 	const requestselectjson = await requestselect.json();
 
@@ -30,8 +31,27 @@ document.addEventListener("DOMContentLoaded", async () => {
 		createOptionMob(requestselectjson[i].name, requestselectjson[i].id);
 	}
 
+	fetchTr();
+	checkArena();
+	interval();
+});
+
+//Create all options
+const $selectEntity = document.querySelector("#entity");
+
+function createOptionMob(name, id) {
+	const $option = document.createElement("option");
+	$option.value = id;
+	$option.textContent = name;
+	$selectEntity.appendChild($option);
+}
+const $tbody = document.querySelector("tbody");
+
+async function fetchTr() {
 	const request = await fetch("http://10.69.4.208:3000/v1/arena/entities");
 	const requestjson = await request.json();
+
+	$tbody.innerHTML = "";
 
 	for (let i = 0; i < requestjson.length; i++) {
 		createMobTr(
@@ -43,24 +63,23 @@ document.addEventListener("DOMContentLoaded", async () => {
 			requestjson[i].entity.strength,
 		);
 	}
-	console.log(mobList);
-});
-
-//Create all options
-const $selectEntity = document.querySelector("#selectEntity");
-
-function createOptionMob(name, id) {
-	const $option = document.createElement("option");
-	$option.value = id;
-	$option.textContent = name;
-	$selectEntity.appendChild($option);
 }
 
 //Spawn mobs in the table
 const $table = document.querySelector("table");
+let onetwo = "white";
 
 function createMobTr(id, icon, name, x, z, strength) {
+
 	const $tr = document.createElement("tr");
+	$tr.classList.add("rows");
+	if (onetwo == "white") {
+		$tr.style.backgroundColor = "#FFFFFF";
+		onetwo = "grey"
+	} else {
+		$tr.style.backgroundColor = "#F4F4F4";
+		onetwo = "white"
+	}
 
 	const $td1 = document.createElement("td");
 	const $img = document.createElement("img");
@@ -87,7 +106,7 @@ function createMobTr(id, icon, name, x, z, strength) {
 	const $td6 = document.createElement("td");
 	const $btn = document.createElement("button");
 	$btn.classList.add("btntd");
-	$btn.textContent = "del";
+	$btn.textContent = "DELETE";
 	$td6.appendChild($btn);
 	$tr.appendChild($td6);
 
@@ -99,7 +118,7 @@ function createMobTr(id, icon, name, x, z, strength) {
 		$tr.remove();
 	});
 
-	$table.appendChild($tr);
+	$tbody.appendChild($tr);
 }
 
 //Form and post elements
@@ -115,10 +134,53 @@ $form.addEventListener("submit", async (e) => {
 		},
 		body: JSON.stringify({
 			entityId: parseInt(formdata.get("select")),
-			x: parseInt(formdata.get("x")),
-			z: parseInt(formdata.get("z")),
+			x: parseInt(formdata.get("xCoo")),
+			z: parseInt(formdata.get("zCoo")),
 		}),
 	});
 	const response = request.json();
 	console.log("submited");
 });
+
+//Openned arena or closed arena
+
+const $openClose = document.querySelector(".status");
+const $xCoo = document.querySelector("#xCoo");
+const $zCoo = document.querySelector("#zCoo");
+const $spawnbutton = document.querySelector(".spawnButton");
+
+async function checkArena() {
+	const request = await fetch("http://10.69.4.208:3000/v1/arena");
+	const response = await request.json();
+
+	if (response.status == "open") {
+		$openClose.classList.remove("closedArena");
+		$openClose.textContent = "OPEN";
+		$selectEntity.classList.remove("noSpawn");
+		$selectEntity.removeAttribute("disabled");
+		$xCoo.classList.remove("noSpawn");
+		$xCoo.removeAttribute("disabled");
+		$zCoo.classList.remove("noSpawn");
+		$zCoo.removeAttribute("disabled");
+		$spawnbutton.classList.remove("noSpawn");
+	} else {
+		$openClose.classList.add("closedArena");
+		$openClose.textContent = "CLOSE";
+		$selectEntity.classList.add("noSpawn");
+		$selectEntity.setAttribute("disabled", "true");
+		$xCoo.classList.add("noSpawn");
+		$xCoo.setAttribute("disabled", "true");
+		$zCoo.classList.add("noSpawn");
+		$zCoo.setAttribute("disabled", "true");
+		$spawnbutton.classList.add("noSpawn");
+	}
+}
+
+let timerInterval;
+
+function interval() {
+	timerInterval = setInterval(() => {
+		checkArena();
+		fetchTr();
+	}, 10000);
+}
