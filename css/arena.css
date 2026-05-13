@@ -5,7 +5,7 @@
 h1 {
 	width: 40%;
 }
-#status {
+.status {
 	background-color: #4f8c69;
 	width: max-content;
 	height: max-content;
