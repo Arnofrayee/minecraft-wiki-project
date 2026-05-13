@@ -91,7 +91,42 @@ hr {
 }
 table {
 	border: 1px solid #8e8e8e;
+	border-collapse: collapse;
 }
 th {
 	background-color: #d9d9d9;
+}
+td {
+	text-align: center;
+}
+td img {
+	width: 28px;
+	height: 28px;
+	margin: auto;
+}
+td p {
+	font-weight: 400;
+	font-size: 16px;
+	color: #3a3a3a;
+}
+tr {
+	border: solid 1px #3a3a3a;
+	border-collapse: collapse;
+}
+td button {
+	background-color: #f25959;
+	border: none;
+	border-radius: 4px;
+	padding: 0px 4px;
+	font-weight: 500;
+	font-size: 16px;
+	color: white;
+}
+.closedArena {
+	background-color: #f25959;
+}
+.noSpawn,
+.noSpawn::placeholder {
+	background-color: #dbdbdb;
+	color: #8e8e8e;
 }
