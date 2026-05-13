@@ -39,7 +39,7 @@ h1 {
 	padding: 8px;
 	background-color: #ffffff;
 	border-radius: 4px;
-	max-width: 82px;
+	width: 82px;
 	min-height: 30px;
 	border: 0px;
 }
@@ -72,6 +72,8 @@ form {
 .entityDiv,
 .xCooDiv,
 .zCooDiv {
+	display: flex;
+	flex-direction: column;
 	width: 26%;
 	justify-content: center;
 	padding: 0;
@@ -112,6 +114,7 @@ td p {
 tr {
 	border: solid 1px #3a3a3a;
 	border-collapse: collapse;
+	padding: 12px;
 }
 td button {
 	background-color: #f25959;
@@ -131,7 +134,112 @@ td button {
 	color: #8e8e8e;
 }
 @media screen and (min-width: 850px) and (max-width: 1439px) {
-	.thEntities {
+	h1 {
+		width: 25%;
+	}
+	.entityDiv,
+	.xCooDiv,
+	.zCooDiv {
+		width: 177px;
+	}
+	.xCoo,
+	.zCoo {
+		width: 177px;
+	}
+	.thEntities span,
+	.thName span,
+	.thX span,
+	.thY span,
+	.thStrength span,
+	.thDel span {
+		display: none;
+	}
+
+	.thEntities::after {
 		content: "Entity";
+		font-weight: 400;
+		font-size: 16px;
+	}
+	.thName::after {
+		content: "Name";
+		font-weight: 400;
+		font-size: 16px;
+	}
+	.thX::after {
+		content: "X Coordinate";
+		font-weight: 400;
+		font-size: 16px;
+	}
+	.thY::after {
+		content: "Y Coordinate";
+		font-weight: 400;
+		font-size: 16px;
+	}
+	.thStrength::after {
+		content: "Strength";
+		font-weight: 400;
+		font-size: 16px;
+	}
+	.thDel::after {
+		content: "del";
+		font-weight: 400;
+		font-size: 16px;
+	}
+
+	tbody {
+		padding: 10px;
+	}
+}
+@media screen and (min-width: 1440px) {
+	h1 {
+		width: 12%;
+	}
+	.entityDiv,
+	.xCooDiv,
+	.zCooDiv {
+		width: 30%;
+	}
+	.xCoo,
+	.zCoo {
+		width: 100%;
+	}
+	.thEntities span,
+	.thName span,
+	.thX span,
+	.thY span,
+	.thStrength span,
+	.thDel span {
+		display: none;
+	}
+
+	.thEntities::after {
+		content: "Entity";
+		font-weight: 400;
+		font-size: 16px;
+	}
+	.thName::after {
+		content: "Name";
+		font-weight: 400;
+		font-size: 16px;
+	}
+	.thX::after {
+		content: "X Coordinate";
+		font-weight: 400;
+		font-size: 16px;
+	}
+	.thY::after {
+		content: "Y Coordinate";
+		font-weight: 400;
+		font-size: 16px;
+	}
+	.thStrength::after {
+		content: "Strength";
+		font-weight: 400;
+		font-size: 16px;
+	}
+	.thDel::after {
+		content: "del";
+		font-weight: 400;
+		font-size: 16px;
 	}
 }
