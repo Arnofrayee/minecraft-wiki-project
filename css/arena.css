@@ -115,6 +115,8 @@ tr {
 	border: solid 1px #3a3a3a;
 	border-collapse: collapse;
 	padding: 12px;
+
+	height: 47px;
 }
 td button {
 	background-color: #f25959;
@@ -124,6 +126,15 @@ td button {
 	font-weight: 500;
 	font-size: 16px;
 	color: white;
+}
+.thEntities,
+.thName,
+.thX,
+.thY,
+.thStrength,
+.thDel {
+	font-weight: 400;
+	font-size: 16px;
 }
 .closedArena {
 	background-color: #f25959;
