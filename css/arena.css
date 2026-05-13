@@ -54,7 +54,7 @@ label {
 	font-size: 14px;
 	color: #3a3a3a;
 }
-#spawnButton {
+.spawnButton {
 	background-color: #4f8c69;
 	border: none;
 	border-radius: 99px;
